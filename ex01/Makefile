@@ -1,11 +1,11 @@
-NAME := clavtrap
+NAME := scavtrap
 
 CC := c++
 
 CPPFLAGS := -Wall -Wextra -Werror -g3 -std=c++98
 #CPPFLAGS := -Wall -Wextra -Werror -g3 -std=c++98 -fsanitize=address
 
-SRC := main.cpp ClapTrap.cpp ClavTrap.cpp
+SRC := main.cpp ClapTrap.cpp ScavTrap.cpp
 
 INCLUDES := -I
 

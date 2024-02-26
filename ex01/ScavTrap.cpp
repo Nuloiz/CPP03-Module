@@ -1,13 +1,12 @@
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap(std::string param)
-    Claptrap(name, 100, 50, 20, 15);
+ScavTrap::ScavTrap(std::string param) :
+    ClapTrap(name, 100, 50, 20, 15)
 {
     std::cout << "ScavTrap Default constructor called" << std::endl;
 }
 
 ScavTrap::ScavTrap(const ScavTrap &other)
-    Claptrap(name, 100, 50, 20, 15);
 {
     std::cout << "ScavTrap Copy constructor called" << std::endl;
     *this = other;
