@@ -6,7 +6,7 @@
 
 class ClapTrap{
 public:
-
+    ClapTrap();
     ClapTrap(std::string param);
     ClapTrap(const ClapTrap &other);
 
