@@ -37,12 +37,12 @@ void ClapTrap::attack(const std::string& target){
 }
 
 void ClapTrap::takeDamage(unsigned int amount){
-    if ((hit_points - amount) < 0){
+    if ((hit_points - (int)amount) < 0){
         std::cout << "ClapTrap " << name << " lost " << hit_points << " Hit Points and is now dead!" << std::endl;
         hit_points = 0;
     } else {
-        std::cout << "ClapTrap " << name << " lost " << amount << " Hit Points and is now on " << hit_points << " Hit Points!" << std::endl;
         hit_points -= amount;
+        std::cout << "ClapTrap " << name << " lost " << amount << " Hit Points and is now on " << hit_points << " Hit Points!" << std::endl;
     }
 }
 void ClapTrap::beRepaired(unsigned int amount){
@@ -53,8 +53,8 @@ void ClapTrap::beRepaired(unsigned int amount){
     else if (energy_points == 0)
         std::cout << "ClapTrap " << name << " is out of energy and cannot be repaired!" << std::endl;
     else{
-        std::cout << "ClapTrap " << name << " repaired himself " << amount << " Hit Points and is now on " << hit_points << " Hit Points!" << std::endl;
         hit_points += amount;
+        std::cout << "ClapTrap " << name << " repaired himself " << amount << " Hit Points and is now on " << hit_points << " Hit Points!" << std::endl;
         energy_points -= 1;
     }
 }
