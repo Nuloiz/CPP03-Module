@@ -1,18 +1,17 @@
 #include "ClapTrap.hpp"
 
 int main() {
-    ClapTrap claptrap("Helge");
-    ClapTrap claptrap2(claptrap);
-    ClapTrap claptrap3 = claptrap;
+    ScavTrap	a;
+    ScavTrap	b("Morgan");
+    ClapTrap	c("Hugues");
 
-    claptrap.attack("Simon");
-    claptrap.takeDamage(5);
-    claptrap.beRepaired(5);
-    claptrap2.attack("Andreas");
-    claptrap2.takeDamage(3);
-    claptrap2.beRepaired(5);
-    claptrap3.attack("Johannes");
-    claptrap3.takeDamage(11);
-    claptrap3.beRepaired(12);
+    b.takeDamage(3);
+    b.takeDamage(20);
+    b.beRepaired(3);
+    b.attack("Eric");
+    b.attack("Eric");
+    b.attack("Eric");
+    b.beRepaired(6);
+    b.attack("Eric");
     return 0;
 }
