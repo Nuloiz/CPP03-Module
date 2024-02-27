@@ -12,7 +12,7 @@ ScavTrap::ScavTrap(std::string param) :
     std::cout << "ScavTrap param constructor called" << std::endl;
 }
 
-ScavTrap::ScavTrap(const ScavTrap &other)
+ScavTrap::ScavTrap(ScavTrap const &other)
 {
     std::cout << "ScavTrap copy constructor called" << std::endl;
     *this = other;

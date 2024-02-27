@@ -9,6 +9,10 @@ ClapTrap::ClapTrap(std::string param) : name(param), hit_points(10), energy_poin
     name = param;
 }
 
+ClapTrap::ClapTrap(std::string name, int hit_points, int energy_points, int attack_dmg) : name(name), hit_points(hit_points), energy_points(energy_points), attack_dmg(attack_dmg){
+    std::cout << "Param constructor for ScavTrap called" << std::endl;
+}
+
 ClapTrap::ClapTrap(const ClapTrap &other) {
     std::cout << "Copy constructor called" << std::endl;
     *this = other;

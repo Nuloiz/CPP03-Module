@@ -8,6 +8,7 @@ class ClapTrap{
 public:
     ClapTrap();
     ClapTrap(std::string param);
+    ClapTrap(std::string name, int hit_points, int energy_points, int attack_dmg);
     ClapTrap(const ClapTrap &other);
 
     ClapTrap &operator=(const ClapTrap &src);
