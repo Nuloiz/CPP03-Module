@@ -1,16 +1,18 @@
 #include "FragTrap.hpp"
 
-ScavTrap::FragTrap()
+FragTrap::FragTrap() :
+    ClapTrap("FragTrap", 100, 100, 30)
 {
     std::cout << "FragTrap default constructor called" << std::endl;
 }
 
-ScavTrap::FragTrap(std::string param)
+FragTrap::FragTrap(std::string param) :
+    ClapTrap(param, 100, 100, 30)
 {
     std::cout << "Fragrap param constructor called" << std::endl;
 }
 
-ScavTrap::FragTrap(FragTrap const &other)
+FragTrap::FragTrap(FragTrap const &other)
 {
     std::cout << "FragTrap copy constructor called" << std::endl;
     *this = other;
@@ -27,4 +29,8 @@ FragTrap & FragTrap::operator=(const FragTrap &other) {
 
 FragTrap::~FragTrap() {
     std::cout << "FragTrap destructor called" << std::endl;
+}
+
+void FragTrap::highFivesGuys(){
+    std::cout << "FragTrap " << name << " requests a high five!" << std::endl;
 }
