@@ -17,4 +17,5 @@ int main(void)
     b.attack("Eric");
     b.beRepaired(100);
     b.attack("Eric");
+    b.highFivesGuys();
 }

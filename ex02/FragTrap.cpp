@@ -9,10 +9,11 @@ FragTrap::FragTrap() :
 FragTrap::FragTrap(std::string param) :
     ClapTrap(param, 100, 100, 30)
 {
-    std::cout << "Fragrap param constructor called" << std::endl;
+    std::cout << "FragTrap param constructor called" << std::endl;
 }
 
-FragTrap::FragTrap(FragTrap const &other)
+FragTrap::FragTrap(FragTrap const &other) :
+    ClapTrap(other.name, other.hit_points, other.energy_points, other.attack_dmg)
 {
     std::cout << "FragTrap copy constructor called" << std::endl;
     *this = other;
